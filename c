@@ -111,3 +111,11 @@ public function data_siswa_perkelas(){
     <!--Order List End-->
 </div>
 </div><!-- Content Body End -->
+
+
+CONTROLLER
+// CRUD Data Siswa
+    public function data_siswa(){
+        $data['perkelas'] = $this->TataUsaha_Model->data_siswa_perkelas()->result();
+        $this->load->view('tatausaha/data_siswa',$data);
+    }
